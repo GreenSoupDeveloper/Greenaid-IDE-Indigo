@@ -1,0 +1,12 @@
+C:\Users\Pc\source\repos\Greenaid IDE Indigo\Greenaid IDE Indigo\bin\Debug\Greenaid IDE Indigo.exe.config
+C:\Users\Pc\source\repos\Greenaid IDE Indigo\Greenaid IDE Indigo\bin\Debug\Greenaid IDE Indigo.exe
+C:\Users\Pc\source\repos\Greenaid IDE Indigo\Greenaid IDE Indigo\bin\Debug\Greenaid IDE Indigo.pdb
+C:\Users\Pc\source\repos\Greenaid IDE Indigo\Greenaid IDE Indigo\obj\Debug\Greenaid IDE Indigo.csproj.AssemblyReference.cache
+C:\Users\Pc\source\repos\Greenaid IDE Indigo\Greenaid IDE Indigo\obj\Debug\Greenaid_IDE_Indigo.Properties.Resources.resources
+C:\Users\Pc\source\repos\Greenaid IDE Indigo\Greenaid IDE Indigo\obj\Debug\Greenaid IDE Indigo.csproj.GenerateResource.cache
+C:\Users\Pc\source\repos\Greenaid IDE Indigo\Greenaid IDE Indigo\obj\Debug\Greenaid IDE Indigo.csproj.CoreCompileInputs.cache
+C:\Users\Pc\source\repos\Greenaid IDE Indigo\Greenaid IDE Indigo\obj\Debug\Greenaid IDE Indigo.exe
+C:\Users\Pc\source\repos\Greenaid IDE Indigo\Greenaid IDE Indigo\obj\Debug\Greenaid IDE Indigo.pdb
+C:\Users\Pc\source\repos\Greenaid IDE Indigo\Greenaid IDE Indigo\obj\Debug\Greenaid_IDE_Indigo.Form1.resources
+C:\Users\Pc\source\repos\Greenaid IDE Indigo\Greenaid IDE Indigo\obj\Debug\Greenaid_IDE_Indigo.options.resources
+C:\Users\Pc\source\repos\Greenaid IDE Indigo\Greenaid IDE Indigo\obj\Debug\Greenaid_IDE_Indigo.about.resources
