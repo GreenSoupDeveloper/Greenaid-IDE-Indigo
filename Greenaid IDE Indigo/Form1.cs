@@ -44,6 +44,22 @@ namespace Greenaid_IDE_Indigo
 
                 this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(45, 45, 45); this.menuStrip1.ForeColor = System.Drawing.Color.FromArgb(245, 245, 245);
             }
+            if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "fr")
+            {
+                openFileToolStripMenuItem.Text = "Ouvrir";
+                saveFileToolStripMenuItem.Text = "Sauvegarder";
+                createFileToolStripMenuItem.Text = "Nouveau fichier";
+                openLastFileOpenedToolStripMenuItem.Text = "Ouvrir le dernier fichier ouvert";
+                fileToolStripMenuItem.Text = "Fichier";
+                optionsToolStripMenuItem.Text = "Options";
+                helpToolStripMenuItem.Text = "Aide";
+                optionsToolStripMenuItem1.Text = "Options";
+                aboutGreenaidIDEIndigoToolStripMenuItem.Text = "A propos de Greenaid IDE...";
+                compileCToolStripMenuItem.Text = "Compiler le code C#...";
+                compileToolStripMenuItem.Text = "Compiler";
+                openHTMLFileInBrowserToolStripMenuItem.Text = "Ouvrir le fichier HTML dans un navigateur web";
+                    
+            }
             if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "es")
             {
                 openFileToolStripMenuItem.Text = "Abrir Archivo";
@@ -60,7 +76,6 @@ namespace Greenaid_IDE_Indigo
                 openHTMLFileInBrowserToolStripMenuItem.Text = "Abrir archivo HTML en el Navegador Web";
                     
             }
-           
 
 
         }
