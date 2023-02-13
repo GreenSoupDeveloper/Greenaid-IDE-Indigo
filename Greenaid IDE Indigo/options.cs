@@ -60,6 +60,21 @@ namespace Greenaid_IDE_Indigo
                 label7.Text = "Directorio del Navegador Web";
 
             }
+            if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "fr")
+            {
+                label1.Text = "Options de Greenaid IDE Indigo";
+                label2.Text = "Thème :";
+                label3.Text = "Langue :";
+                button2.Text = "Sombre";
+                button3.Text = "Clair";
+                button1.Text = "Accépter";
+                label4.Text = "Méthode de séléction du répertoire de compilation :";
+                label5.Text = "Nom de l'application compilé : ";
+                checkBox1.Text = "Selectionner le répertoire quand le bouton 'Compiler du code C#' est clické";
+                checkBox2.Text = "Selectioner un répertoire prédéfini";
+                label7.Text = "Emplacement du navigateur web :";
+
+            }
 
             if (File.ReadAllText(@"greenaideindigo\compiledirmode.dll") == "")
             {
@@ -123,6 +138,10 @@ namespace Greenaid_IDE_Indigo
             {
                 File.WriteAllText(@"greenaideindigo\languaje.dll", "en");
             }
+            if (comboBox1.SelectedItem == "Français")
+            {
+                File.WriteAllText(@"greenaideindigo\languaje.dll", "fr");
+            }
             if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "es")
             {
                 MessageBox.Show("Para aplicar los cambios, debes reiniciar el programa", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -135,9 +154,9 @@ namespace Greenaid_IDE_Indigo
                 this.Close();
 
             }
-            if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "")
+            if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "fr")
             {
-                MessageBox.Show("To apply the changes, you need to restart the program.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Pour appliquer les changements, veuiler redémarrer le programme", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
 
             }
