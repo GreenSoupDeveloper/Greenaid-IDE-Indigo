@@ -119,6 +119,7 @@ namespace Greenaid_IDE_Indigo
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "English",
+            "Français",
             "Español"});
             this.comboBox1.Location = new System.Drawing.Point(70, 45);
             this.comboBox1.Name = "comboBox1";
