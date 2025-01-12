@@ -21,22 +21,24 @@ namespace Greenaid_IDE_Indigo
     {
         public static string savedir;
         public static bool savebool;
-   
-        public OpenFileDialog f = new OpenFileDialog();
+
+        
         public FolderBrowserDialog ffol = new FolderBrowserDialog();
-        public SaveFileDialog fsave = new SaveFileDialog();
+      
         public static string savefolder;
         public static string openedfiletext;
-     
+        public static string[] indigoSettings;
+
         public Form1()
         {
             InitializeComponent();
-            this.mainTextBox.Size = Screen.PrimaryScreen.Bounds.Size;
+            
 
 
-            if (File.ReadAllText(@"greenaideindigo\theme.dll") == "dark")
+            if (indigoSettings[1] == "theme=dark")
             {
                 this.BackColor = System.Drawing.Color.FromArgb(25, 25, 25);
+
                 this.mainTextBox.ForeColor = System.Drawing.Color.FromArgb(245, 245, 245);
                 this.mainTextBox.BackColor = System.Drawing.Color.FromArgb(25, 25, 25);
 
@@ -44,7 +46,7 @@ namespace Greenaid_IDE_Indigo
 
                 this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(45, 45, 45); this.menuStrip1.ForeColor = System.Drawing.Color.FromArgb(245, 245, 245);
             }
-            if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "fr")
+            if (indigoSettings[3] == "lang=fr")
             {
                 openFileToolStripMenuItem.Text = "Ouvrir";
                 saveFileToolStripMenuItem.Text = "Sauvegarder";
@@ -58,9 +60,9 @@ namespace Greenaid_IDE_Indigo
                 compileCToolStripMenuItem.Text = "Compiler le code C#...";
                 compileToolStripMenuItem.Text = "Compiler";
                 openHTMLFileInBrowserToolStripMenuItem.Text = "Ouvrir le fichier HTML dans un navigateur web";
-                    
+
             }
-            if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "es")
+            if (indigoSettings[3] == "lang=es")
             {
                 openFileToolStripMenuItem.Text = "Abrir Archivo";
                 saveFileToolStripMenuItem.Text = "Guardar Archivo";
@@ -74,7 +76,7 @@ namespace Greenaid_IDE_Indigo
                 compileCToolStripMenuItem.Text = "Compilar codigo de C#";
                 compileToolStripMenuItem.Text = "Compilar";
                 openHTMLFileInBrowserToolStripMenuItem.Text = "Abrir archivo HTML en el Navegador Web";
-                    
+
             }
 
 
@@ -84,15 +86,16 @@ namespace Greenaid_IDE_Indigo
             try
             {
                 string exename = "";
-                if (File.ReadAllText(@"greenaideindigo\compiledirmode.dll") == "2")
+                if (indigoSettings[5] == "1")
                 {
-                    exename = File.ReadAllText(@"greenaideindigo\compilecustomdir.dll") + @"\" + File.ReadAllText(@"greenaideindigo\compiledappcustomname.dll") +".exe";
+                    exename = indigoSettings[6] + @"\" + indigoSettings[7].Split(new[] { "=" }, StringSplitOptions.RemoveEmptyEntries)[1] + ".exe";
                 }
-                if (File.ReadAllText(@"greenaideindigo\compiledirmode.dll") == "1")
+                else
                 {
-                    exename = savefolder + File.ReadAllText(@"greenaideindigo\compiledappcustomname.dll") + ".exe";
+                    exename = savefolder + indigoSettings[7].Split(new[] { "=" }, StringSplitOptions.RemoveEmptyEntries)[1] + ".exe";
                 }
-              
+
+
                 CodeDomProvider provider = CodeDomProvider.CreateProvider("CSharp");
                 CompilerParameters compars = new CompilerParameters();
 
@@ -107,59 +110,43 @@ namespace Greenaid_IDE_Indigo
                 {
                     foreach (CompilerError ce in res.Errors)
                     {
-                        if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "es")
+                        if (indigoSettings[3] == "lang=es")
                         {
-                            MessageBox.Show("Error de compilacion: " + ce.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Error de compilación: " + ce.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-                        if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "en")
+                        if (indigoSettings[3] == "lang=en")
                         {
                             MessageBox.Show("Compiling Error: " + ce.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-                        
+
                     }
                 }
                 else
                 {
-                    if (File.ReadAllText(@"greenaideindigo\compiledirmode.dll") == "2")
-                    {
-                        if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "es")
-                        {
-                            MessageBox.Show("Compilado, ahore el ejecutable estara en el directorio pre-seleccionado", "Compilado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Process.Start("explorer.exe", File.ReadAllText(@"greenaideindigo\compilecustomdir.dll"));
-                        }
-                        if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "en")
-                        {
-                            MessageBox.Show("Compiled, now the executable will be in the pre-selected location", "Compiled!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Process.Start("explorer.exe", File.ReadAllText(@"greenaideindigo\compilecustomdir.dll"));
-                        }
-                       
-                    }
-                    if (File.ReadAllText(@"greenaideindigo\compiledirmode.dll") == "1")
-                    {
-                        if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "es")
+                        if (indigoSettings[3] == "lang=es")
                         {
                             MessageBox.Show("Compilado, ahore el ejecutable estara en el directorio seleccionado", "Compilado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Process.Start("explorer.exe", File.ReadAllText(@"greenaideindigo\compilecustomdir.dll"));
+                            //Process.Start("explorer.exe", File.ReadAllText(@"greenaideindigo\compilecustomdir.dll"));
                         }
-                        if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "en")
+                        if (indigoSettings[3] == "lang=en")
                         {
                             MessageBox.Show("Compiled, now the executable will be in the selected location", "Compiled!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Process.Start("explorer.exe", savefolder);
+                            //Process.Start("explorer.exe", savefolder);
                         }
-                       
-                       
-                    }
-                  
+
+
+                    
+
                 }
             }
             catch (Exception ex)
             {
 
-                MessageBox.Show("Error: "+ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
 
-            
+
 
 
 
@@ -169,35 +156,42 @@ namespace Greenaid_IDE_Indigo
         {
             try
             {
+                OpenFileDialog f = new OpenFileDialog();
                 f.Filter = "Any File| *.*|Text File| *.txt|HTML WebSite| *.html|C# File| *.cs|Python File| *.py|MD File| *.md|Batch File| *.bat|C File| *.c|C++ File| *.cpp|CSS File| *.css|F# File| *.fs|JAVA File| *.jav;*.jar;*.java|JavaScript File| *.js|PHP File| *.php|JSON File| *.json|INI File| *.ini|LUA File| *.lua|Rust File| *.rs|Assembly File| *.asm|Makefile File| *.mk|XML File| *.xml|Visual Basic File| *.vb;*.brs;*.vbs;*.bas;*.vba|DLL File| *.dll";
                 f.ShowDialog();
-                savedir = f.FileName;
-                mainTextBox.Text = File.ReadAllText(f.FileName);
-                File.WriteAllText(@"greenaideindigo\lastfileopened.dll", savedir);
-                openedfiletext = File.ReadAllText(f.FileName);
-           
-                if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "es")
+                if (f.FileName != "")
                 {
-                    this.Text = "Greenaid IDE Indigo 23 - " + savedir + " - Archivo abierto";
+                    savedir = f.FileName;
+                    mainTextBox.Text = File.ReadAllText(f.FileName);
+                    indigoSettings[9] = "lastFileOpened=" + savedir;
+                    File.WriteAllLines("indigoSettings.cfg" , indigoSettings);
+
+                    openedfiletext = File.ReadAllText(f.FileName);
+
+                    if (indigoSettings[3] == "lang=es")
+                    {
+                        this.Text = "Greenaid IDE Indigo 25 - " + Path.GetFileName(savedir) + " - Archivo abierto";
+                    }
+                    if (indigoSettings[3] == "lang=en")
+                    {
+                        this.Text = "Greenaid IDE Indigo 25 - " + Path.GetFileName(savedir) + " - File Opened";
+                    }
                 }
-                if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "en")
-                {
-                    this.Text = "Greenaid IDE Indigo 23 - " + savedir + " - File Opened";
-                }
+
 
             }
             catch (Exception ex)
             {
 
-                if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "es")
+                if (indigoSettings[3] == "lang=es")
                 {
                     MessageBox.Show("Algo salio mal abriendo el archivo\n\nError: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "en")
+                if (indigoSettings[3] == "lang=en")
                 {
-                    MessageBox.Show("Something wrong happen when opening the file\n\nError: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Something wrong happened when opening the file\n\nError: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-              
+
 
             }
         }
@@ -205,6 +199,7 @@ namespace Greenaid_IDE_Indigo
         {
             try
             {
+                SaveFileDialog fsave = new SaveFileDialog();
                 fsave.Filter = "Text File| *.txt|HTML WebSite| *.html|C# File| *.cs|Python File| *.py|MD File| *.md|Batch File| *.bat|C File| *.c|C++ File| *.cpp|CSS File| *.css|F# File| *.fs|JAVA File| *.jav;*.jar;*.java|JavaScript File| *.js|PHP File| *.php|JSON File| *.json|INI File| *.ini|LUA File| *.lua|Rust File| *.rs|Assembly File| *.asm|Makefile File| *.mk|XML File| *.xml|Visual Basic File| *.vb;*.brs;*.vbs;*.bas;*.vba|DLL File| *.dll";
 
 
@@ -212,16 +207,16 @@ namespace Greenaid_IDE_Indigo
                 {
 
                     File.WriteAllText(savedir, mainTextBox.Text);
-      
-                    if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "es")
+
+                    if (indigoSettings[3] == "lang=es")
                     {
-                        this.Text = "Greenaid IDE Indigo 23 - " + savedir + " - Archivo guardado";
+                        this.Text = "Greenaid IDE Indigo 25 - " + Path.GetFileName(savedir) + " - Archivo guardado";
                     }
-                    if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "en")
+                    if (indigoSettings[3] == "lang=en")
                     {
-                        this.Text = "Greenaid IDE Indigo 23 - " + savedir + " - File Saved";
+                        this.Text = "Greenaid IDE Indigo 25 - " + Path.GetFileName(savedir) + " - File Saved";
                     }
-                    openedfiletext = File.ReadAllText(f.FileName);
+                // openedfiletext = File.ReadAllText(fsave.FileName);
 
                 }
                 if (!File.Exists(savedir))
@@ -229,15 +224,15 @@ namespace Greenaid_IDE_Indigo
                     fsave.ShowDialog();
                     savedir = fsave.FileName;
                     File.WriteAllText(savedir, mainTextBox.Text);
-                    if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "es")
+                    if (indigoSettings[3] == "lang=es")
                     {
-                        this.Text = "Greenaid IDE Indigo 23 - " + savedir + " - Archivo guardado";
+                        this.Text = "Greenaid IDE Indigo 25 - " + Path.GetFileName(savedir) + " - Archivo guardado";
                     }
-                    if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "en")
+                    if (indigoSettings[3] == "lang=en")
                     {
-                        this.Text = "Greenaid IDE Indigo 23 - " + savedir + " - File Saved";
+                        this.Text = "Greenaid IDE Indigo 25 - " + Path.GetFileName(savedir) + " - File Saved";
                     }
-                    openedfiletext = File.ReadAllText(f.FileName);
+                    //openedfiletext = File.ReadAllText(f.FileName);
 
                 }
             }
@@ -245,11 +240,11 @@ namespace Greenaid_IDE_Indigo
             {
 
 
-                if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "es")
+                if (indigoSettings[3] == "lang=es")
                 {
                     MessageBox.Show("Algo salio mal guardando el archivo\n\nError: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "en")
+                if (indigoSettings[3] == "lang=en")
                 {
                     MessageBox.Show("Something wrong happen when saving the file\n\nError: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -262,13 +257,13 @@ namespace Greenaid_IDE_Indigo
         {
             mainTextBox.Text = "";
             savedir = "";
-            if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "es")
+            if (indigoSettings[3] == "lang=es")
             {
-                this.Text = "Greenaid IDE Indigo 23 - " + savedir + " - Archivo creado";
+                this.Text = "Greenaid IDE Indigo 23 - Archivo creado";
             }
-            if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "en")
+            if (indigoSettings[3] == "lang=en")
             {
-                this.Text = "Greenaid IDE Indigo 23 - " + savedir + " - File Created";
+                this.Text = "Greenaid IDE Indigo 23 - File Created";
             }
         }
 
@@ -281,43 +276,43 @@ namespace Greenaid_IDE_Indigo
         {
             try
             {
-              
-               
-                if (String.IsNullOrEmpty(File.ReadAllText(@"greenaideindigo\lastfileopened.dll")))
+                string thinger = indigoSettings[9].Split(new[] { "=" }, StringSplitOptions.RemoveEmptyEntries)[1];
+
+                if (thinger == "none")
                 {
-                    if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "es")
+                    if (indigoSettings[3] == "lang=es")
                     {
                         MessageBox.Show("Ningun archivo ha sido abierto recientemente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "en")
+                    if (indigoSettings[3] == "lang=en")
                     {
                         MessageBox.Show("No file has been opened recently", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                if (!String.IsNullOrEmpty(File.ReadAllText(@"greenaideindigo\lastfileopened.dll")))
+                else
                 {
-                    savedir = File.ReadAllText(@"greenaideindigo\lastfileopened.dll");
-                    mainTextBox.Text = File.ReadAllText(File.ReadAllText(@"greenaideindigo\lastfileopened.dll"));
-                    openedfiletext = File.ReadAllText(File.ReadAllText(@"greenaideindigo\lastfileopened.dll"));
-                    if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "es")
+                    savedir = thinger;
+                    mainTextBox.Text = File.ReadAllText(thinger);
+                    openedfiletext = File.ReadAllText(thinger);
+                    if (indigoSettings[3] == "lang=es")
                     {
-                        this.Text = "Greenaid IDE Indigo 23 - " + savedir + " - Archivo abierto";
+                        this.Text = "Greenaid IDE Indigo 23 - " + Path.GetFileName(savedir) + " - Archivo abierto";
                     }
-                    if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "en")
+                    if (indigoSettings[3] == "lang=en")
                     {
-                        this.Text = "Greenaid IDE Indigo 23 - " + savedir + " - File Opened";
+                        this.Text = "Greenaid IDE Indigo 23 - " + Path.GetFileName(savedir) + " - File Opened";
                     }
                 }
-               
+
 
 
             }
             catch (Exception ex)
             {
-              
-               
 
-                
+
+
+
 
             }
         }
@@ -331,35 +326,35 @@ namespace Greenaid_IDE_Indigo
         {
             try
             {
-              
-                  
+
+
                 if (Directory.Exists(savefolder))
                 {
                     if (!String.IsNullOrEmpty(savedir))
                     {
-                        if (savedir.EndsWith(".cs"))
+                        if (Path.GetExtension(savedir) == "cs")
                         {
                             compile(savedir);
-                            if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "es")
+                            if (indigoSettings[3] == "lang=es")
                             {
-                                this.Text = "Greenaid IDE Indigo 23 - " + savedir + " - Archivo compilado";
+                                this.Text = "Greenaid IDE Indigo 23 - " + Path.GetFileName(savedir) + " - Archivo compilado";
                             }
-                            if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "en")
+                            if (indigoSettings[3] == "lang=en")
                             {
-                                this.Text = "Greenaid IDE Indigo 23 - " + savedir + " - File Compiled";
+                                this.Text = "Greenaid IDE Indigo 23 - " + Path.GetFileName(savedir) + " - File Compiled";
                             }
                         }
                         else
                         {
-                            this.Text = "Greenaid IDE Indigo 23 - " + savedir + " - File not Compiled";
-                            if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "es")
+                            this.Text = "Greenaid IDE Indigo 23 - " + Path.GetFileName(savedir) + " - File not Compiled";
+                            if (indigoSettings[3] == "lang=es")
                             {
-                                this.Text = "Greenaid IDE Indigo 23 - " + savedir + " - Archivo no compilado";
+                                this.Text = "Greenaid IDE Indigo 23 - " + Path.GetFileName(savedir) + " - Archivo no compilado";
                                 MessageBox.Show("Este no es un archivo de C#!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
-                            if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "en")
+                            if (indigoSettings[3] == "lang=en")
                             {
-                                this.Text = "Greenaid IDE Indigo 23 - " + savedir + " - File not Compiled";
+                                this.Text = "Greenaid IDE Indigo 23 - " + Path.GetFileName(savedir) + " - File not Compiled";
                                 MessageBox.Show("This is not a C# file!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
 
@@ -368,122 +363,122 @@ namespace Greenaid_IDE_Indigo
                     if (String.IsNullOrEmpty(savedir))
                     {
 
-                        if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "es")
+                        if (indigoSettings[3] == "lang=es")
                         {
-                            this.Text = "Greenaid IDE Indigo 23 - " + savedir + " - Archivo no compilado";
+                            this.Text = "Greenaid IDE Indigo 23 - " + Path.GetFileName(savedir) + " - Archivo no compilado";
                             MessageBox.Show("No se puede compilar este archivo porque no existe, guarda el archivo en formato '.cs' para poder compilarlo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-                        if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "en")
+                        if (indigoSettings[3] == "lang=en")
                         {
-                            this.Text = "Greenaid IDE Indigo 23 - " + savedir + " - File not Compiled";
+                            this.Text = "Greenaid IDE Indigo 23 - " + Path.GetFileName(savedir) + " - File not Compiled";
                             MessageBox.Show("Can't compile because this file doesnt exists, save the file in '.cs' format to be able to compile", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
 
-                    }
+                }
                 if (!Directory.Exists(savefolder))
                 {
                     if (!String.IsNullOrEmpty(savedir))
                     {
                         if (savedir.EndsWith(".cs"))
                         {
-                            if (File.ReadAllText(@"greenaideindigo\compiledirmode.dll") == "2")
+                            if (indigoSettings[5] == "csharpDirMode=1")
                             {
-                               
-                               
+
+
                                 compile(savedir);
-                                if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "es")
+                                if (indigoSettings[3] == "lang=es")
                                 {
-                                    this.Text = "Greenaid IDE Indigo 23 - " + savedir + " - Archivo compilado";
+                                    this.Text = "Greenaid IDE Indigo 23 - " + Path.GetFileName(savedir) + " - Archivo compilado";
                                 }
-                                if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "en")
+                                if (indigoSettings[3] == "lang=en")
                                 {
-                                    this.Text = "Greenaid IDE Indigo 23 - " + savedir + " - File Compiled";
+                                    this.Text = "Greenaid IDE Indigo 23 - " + Path.GetFileName(savedir) + " - File Compiled";
                                 }
                             }
-                            if (File.ReadAllText(@"greenaideindigo\compiledirmode.dll") == "1")
+                            if (indigoSettings[5] == "csharpDirMode=0")
                             {
 
                                 ffol.ShowDialog();
                                 savefolder = ffol.SelectedPath + @"\";
                                 compile(savedir);
-                                if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "es")
+                                if (indigoSettings[3] == "lang=es")
                                 {
-                                    this.Text = "Greenaid IDE Indigo 23 - " + savedir + " - Archivo compilado";
+                                    this.Text = "Greenaid IDE Indigo 23 - " + Path.GetFileName(savedir) + " - Archivo compilado";
                                 }
-                                if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "en")
+                                if (indigoSettings[3] == "lang=en")
                                 {
-                                    this.Text = "Greenaid IDE Indigo 23 - " + savedir + " - File Compiled";
+                                    this.Text = "Greenaid IDE Indigo 23 - " + Path.GetFileName(savedir) + " - File Compiled";
                                 }
-                       
+
                             }
-                           
+
                         }
                         else
                         {
-                            if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "es")
+                            if (indigoSettings[3] == "lang=es")
                             {
-                                this.Text = "Greenaid IDE Indigo 23 - " + savedir + " - Archivo no compilado";
+                                this.Text = "Greenaid IDE Indigo 23 - " + Path.GetFileName(savedir) + " - Archivo no compilado";
                                 MessageBox.Show("Este no es un archivo de C#!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
-                            if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "en")
+                            if (indigoSettings[3] == "lang=en")
                             {
-                                this.Text = "Greenaid IDE Indigo 23 - " + savedir + " - File not Compiled";
+                                this.Text = "Greenaid IDE Indigo 23 - " + Path.GetFileName(savedir) + " - File not Compiled";
                                 MessageBox.Show("This is not a C# file!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
 
-                           
+
 
                         }
                     }
                     if (String.IsNullOrEmpty(savedir))
                     {
 
-                        if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "es")
+                        if (indigoSettings[3] == "lang=es")
                         {
-                            this.Text = "Greenaid IDE Indigo 23 - " + savedir + " - Archivo no compilado";
+                            this.Text = "Greenaid IDE Indigo 23 - " + Path.GetFileName(savedir) + " - Archivo no compilado";
                             MessageBox.Show("No se puede compilar este archivo porque no existe, guarda el archivo en formato '.cs' para poder compilarlo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-                        if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "en")
+                        if (indigoSettings[3] == "lang=en")
                         {
-                            this.Text = "Greenaid IDE Indigo 23 - " + savedir + " - File not Compiled";
+                            this.Text = "Greenaid IDE Indigo 23 - " + Path.GetFileName(savedir) + " - File not Compiled";
                             MessageBox.Show("Can't compile because this file doesnt exists, save the file in '.cs' format to be able to compile", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-                      
+
 
                     }
-                    }
+                }
 
 
 
-                
-                
-            
-                
+
+
+
+
 
             }
             catch (Exception ex)
             {
-              
+
 
             }
-       
+
         }
 
         private void mainTextBox_TextChanged(object sender, EventArgs e)
         {
             if (mainTextBox.Text != openedfiletext)
             {
-                if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "es")
+                if (indigoSettings[3] == "lang=es")
                 {
-                    this.Text = "Greenaid IDE Indigo 23 - " + savedir + " - Archivo no guardado";
+                    this.Text = "Greenaid IDE Indigo 23 - " + Path.GetFileName(savedir) + " - Archivo no guardado";
                 }
-                if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "en")
+                if (indigoSettings[3] == "lang=en")
                 {
-                    this.Text = "Greenaid IDE Indigo 23 - " + savedir + " - File not Saved";
+                    this.Text = "Greenaid IDE Indigo 23 - " + Path.GetFileName(savedir) + " - File not Saved";
                 }
-               
-        
+
+
             }
         }
 
@@ -502,11 +497,11 @@ namespace Greenaid_IDE_Indigo
                     if (!savedir.EndsWith(".html"))
                     {
 
-                        if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "es")
+                        if (indigoSettings[3] == "lang=es")
                         {
                             MessageBox.Show("Este no es un archivo HTML!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-                        if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "en")
+                        if (indigoSettings[3] == "lang=en")
                         {
                             MessageBox.Show("This is not a HTML file!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
@@ -515,15 +510,15 @@ namespace Greenaid_IDE_Indigo
                 }
                 if (String.IsNullOrEmpty(savedir))
                 {
-                    if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "es")
+                    if (indigoSettings[3] == "lang=es")
                     {
                         MessageBox.Show("Este no es un archivo HTML!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "en")
+                    if (indigoSettings[3] == "lang=en")
                     {
                         MessageBox.Show("This is not a HTML file!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                 
+
                 }
             }
             catch (Exception ex)
@@ -531,18 +526,18 @@ namespace Greenaid_IDE_Indigo
 
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
+
         }
     }
-     /*
-       if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "es")
-                {
-                   
-                }
+    /*
+      if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "es")
+               {
+
+               }
 if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "en")
 {
 
 }
-     */
-     
+    */
+
 }

@@ -10,3 +10,15 @@ C:\Users\Pc\source\repos\Greenaid IDE Indigo\Greenaid IDE Indigo\obj\Debug\Green
 C:\Users\Pc\source\repos\Greenaid IDE Indigo\Greenaid IDE Indigo\obj\Debug\Greenaid_IDE_Indigo.Form1.resources
 C:\Users\Pc\source\repos\Greenaid IDE Indigo\Greenaid IDE Indigo\obj\Debug\Greenaid_IDE_Indigo.options.resources
 C:\Users\Pc\source\repos\Greenaid IDE Indigo\Greenaid IDE Indigo\obj\Debug\Greenaid_IDE_Indigo.about.resources
+C:\Users\greens\Documents\GitHub\Greenaid-IDE-Indigo\Greenaid IDE Indigo\bin\Debug\Greenaid IDE Indigo.exe.config
+C:\Users\greens\Documents\GitHub\Greenaid-IDE-Indigo\Greenaid IDE Indigo\bin\Debug\Greenaid IDE Indigo.exe
+C:\Users\greens\Documents\GitHub\Greenaid-IDE-Indigo\Greenaid IDE Indigo\bin\Debug\Greenaid IDE Indigo.pdb
+C:\Users\greens\Documents\GitHub\Greenaid-IDE-Indigo\Greenaid IDE Indigo\obj\Debug\Greenaid IDE Indigo.csproj.AssemblyReference.cache
+C:\Users\greens\Documents\GitHub\Greenaid-IDE-Indigo\Greenaid IDE Indigo\obj\Debug\Greenaid_IDE_Indigo.about.resources
+C:\Users\greens\Documents\GitHub\Greenaid-IDE-Indigo\Greenaid IDE Indigo\obj\Debug\Greenaid_IDE_Indigo.Form1.resources
+C:\Users\greens\Documents\GitHub\Greenaid-IDE-Indigo\Greenaid IDE Indigo\obj\Debug\Greenaid_IDE_Indigo.options.resources
+C:\Users\greens\Documents\GitHub\Greenaid-IDE-Indigo\Greenaid IDE Indigo\obj\Debug\Greenaid_IDE_Indigo.Properties.Resources.resources
+C:\Users\greens\Documents\GitHub\Greenaid-IDE-Indigo\Greenaid IDE Indigo\obj\Debug\Greenaid IDE Indigo.csproj.GenerateResource.cache
+C:\Users\greens\Documents\GitHub\Greenaid-IDE-Indigo\Greenaid IDE Indigo\obj\Debug\Greenaid IDE Indigo.csproj.CoreCompileInputs.cache
+C:\Users\greens\Documents\GitHub\Greenaid-IDE-Indigo\Greenaid IDE Indigo\obj\Debug\Greenaid IDE Indigo.exe
+C:\Users\greens\Documents\GitHub\Greenaid-IDE-Indigo\Greenaid IDE Indigo\obj\Debug\Greenaid IDE Indigo.pdb

@@ -42,8 +42,8 @@ namespace Greenaid_IDE_Indigo
             this.aboutGreenaidIDEIndigoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.compileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.compileCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mainTextBox = new System.Windows.Forms.TextBox();
             this.openHTMLFileInBrowserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mainTextBox = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -145,23 +145,27 @@ namespace Greenaid_IDE_Indigo
             this.compileCToolStripMenuItem.Text = "Compile C# Code";
             this.compileCToolStripMenuItem.Click += new System.EventHandler(this.compileCToolStripMenuItem_Click);
             // 
-            // mainTextBox
-            // 
-            this.mainTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mainTextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mainTextBox.Location = new System.Drawing.Point(0, 24);
-            this.mainTextBox.Multiline = true;
-            this.mainTextBox.Name = "mainTextBox";
-            this.mainTextBox.Size = new System.Drawing.Size(754, 287);
-            this.mainTextBox.TabIndex = 1;
-            this.mainTextBox.TextChanged += new System.EventHandler(this.mainTextBox_TextChanged);
-            // 
             // openHTMLFileInBrowserToolStripMenuItem
             // 
             this.openHTMLFileInBrowserToolStripMenuItem.Name = "openHTMLFileInBrowserToolStripMenuItem";
             this.openHTMLFileInBrowserToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
             this.openHTMLFileInBrowserToolStripMenuItem.Text = "Open HTML File in Web browser";
             this.openHTMLFileInBrowserToolStripMenuItem.Click += new System.EventHandler(this.openHTMLFileInBrowserToolStripMenuItem_Click);
+            // 
+            // mainTextBox
+            // 
+            this.mainTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mainTextBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mainTextBox.Location = new System.Drawing.Point(0, 24);
+            this.mainTextBox.Multiline = true;
+            this.mainTextBox.Name = "mainTextBox";
+            this.mainTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.mainTextBox.Size = new System.Drawing.Size(800, 427);
+            this.mainTextBox.TabIndex = 1;
+            this.mainTextBox.TextChanged += new System.EventHandler(this.mainTextBox_TextChanged);
             // 
             // Form1
             // 
@@ -173,7 +177,7 @@ namespace Greenaid_IDE_Indigo
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Greenaid IDE Indigo 23";
+            this.Text = "Greenaid IDE Indigo 25";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

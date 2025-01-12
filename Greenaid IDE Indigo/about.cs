@@ -17,7 +17,7 @@ namespace Greenaid_IDE_Indigo
         public about()
         {
             InitializeComponent();
-            if (File.ReadAllText(@"greenaideindigo\theme.dll") == "dark")
+            if (Form1.indigoSettings[1] == "theme=dark")
             {
                 this.BackColor = System.Drawing.Color.FromArgb(25, 25, 25);
 
@@ -27,12 +27,17 @@ namespace Greenaid_IDE_Indigo
                 this.label1.ForeColor = System.Drawing.Color.FromArgb(245, 245, 245);
                 this.label2.ForeColor = System.Drawing.Color.FromArgb(245, 245, 245);
             }
-            if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "es")
+            if (Form1.indigoSettings[3] == "lang=es")
             {
                 label2.Text = "Por: GreenSoupDeveloper";
 
 
             }
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
         }
     }

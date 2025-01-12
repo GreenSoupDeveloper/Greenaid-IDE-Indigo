@@ -29,6 +29,7 @@ namespace Greenaid_IDE_Indigo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(about));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,6 +44,7 @@ namespace Greenaid_IDE_Indigo
             this.pictureBox1.Size = new System.Drawing.Size(785, 396);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -51,7 +53,7 @@ namespace Greenaid_IDE_Indigo
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Version: 1.1.0";
+            this.label1.Text = "Version: 1.2.0";
             // 
             // label2
             // 
@@ -70,6 +72,9 @@ namespace Greenaid_IDE_Indigo
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "about";
             this.Text = "About...";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
