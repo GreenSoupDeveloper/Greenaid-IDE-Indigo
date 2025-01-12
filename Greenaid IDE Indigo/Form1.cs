@@ -492,7 +492,7 @@ namespace Greenaid_IDE_Indigo
 
                     if (savedir.EndsWith(".html"))
                     {
-                        Process.Start(File.ReadAllText(@"greenaideindigo\browserloc.dll"), savedir);
+                        Process.Start(indigoSettings[8].Split(new[] { "=" }, StringSplitOptions.RemoveEmptyEntries)[1], savedir);
                     }
                     if (!savedir.EndsWith(".html"))
                     {

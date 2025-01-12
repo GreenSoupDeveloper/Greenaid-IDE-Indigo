@@ -35,6 +35,7 @@ namespace Greenaid_IDE_Indigo
                 sw.WriteLine("csharpCustomDir=none");
                 sw.WriteLine("csharpCompiledName=program");
                 sw.WriteLine("htmlBrowserDir=none");
+                sw.WriteLine("lastFileOpened=none");
                 sw.Close();
              
              

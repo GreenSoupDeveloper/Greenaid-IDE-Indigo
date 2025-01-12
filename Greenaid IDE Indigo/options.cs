@@ -120,7 +120,7 @@ namespace Greenaid_IDE_Indigo
                 this.Close();
 
             }
-            if (Form1.indigoSettings[3] == "lang=en")
+            else if (Form1.indigoSettings[3] == "lang=en")
             {
                 MessageBox.Show("To apply the changes, you need to restart the program.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();

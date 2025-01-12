@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\greens\\Documents\\GitHub\\Greenaid-IDE-Indigo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{95226BE1-3AB0-45A2-9880-B0C5E9F50939}|Greenaid IDE Indigo\\Greenaid IDE Indigo.csproj|C:\\Users\\greens\\Documents\\GitHub\\Greenaid-IDE-Indigo\\greenaid ide indigo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95226BE1-3AB0-45A2-9880-B0C5E9F50939}|Greenaid IDE Indigo\\Greenaid IDE Indigo.csproj|solutionrelative:greenaid ide indigo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95226BE1-3AB0-45A2-9880-B0C5E9F50939}|Greenaid IDE Indigo\\Greenaid IDE Indigo.csproj|c:\\users\\greens\\documents\\github\\greenaid-ide-indigo\\greenaid ide indigo\\about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95226BE1-3AB0-45A2-9880-B0C5E9F50939}|Greenaid IDE Indigo\\Greenaid IDE Indigo.csproj|solutionrelative:greenaid ide indigo\\about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95226BE1-3AB0-45A2-9880-B0C5E9F50939}|Greenaid IDE Indigo\\Greenaid IDE Indigo.csproj|c:\\users\\greens\\documents\\github\\greenaid-ide-indigo\\greenaid ide indigo\\options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{95226BE1-3AB0-45A2-9880-B0C5E9F50939}|Greenaid IDE Indigo\\Greenaid IDE Indigo.csproj|C:\\Users\\greens\\Documents\\GitHub\\Greenaid-IDE-Indigo\\greenaid ide indigo\\options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95226BE1-3AB0-45A2-9880-B0C5E9F50939}|Greenaid IDE Indigo\\Greenaid IDE Indigo.csproj|solutionrelative:greenaid ide indigo\\options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95226BE1-3AB0-45A2-9880-B0C5E9F50939}|Greenaid IDE Indigo\\Greenaid IDE Indigo.csproj|C:\\Users\\greens\\Documents\\GitHub\\Greenaid-IDE-Indigo\\greenaid ide indigo\\about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{95226BE1-3AB0-45A2-9880-B0C5E9F50939}|Greenaid IDE Indigo\\Greenaid IDE Indigo.csproj|solutionrelative:greenaid ide indigo\\about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{95226BE1-3AB0-45A2-9880-B0C5E9F50939}|Greenaid IDE Indigo\\Greenaid IDE Indigo.csproj|c:\\users\\greens\\documents\\github\\greenaid-ide-indigo\\greenaid ide indigo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95226BE1-3AB0-45A2-9880-B0C5E9F50939}|Greenaid IDE Indigo\\Greenaid IDE Indigo.csproj|solutionrelative:greenaid ide indigo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95226BE1-3AB0-45A2-9880-B0C5E9F50939}|Greenaid IDE Indigo\\Greenaid IDE Indigo.csproj|C:\\Users\\greens\\Documents\\GitHub\\Greenaid-IDE-Indigo\\greenaid ide indigo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95226BE1-3AB0-45A2-9880-B0C5E9F50939}|Greenaid IDE Indigo\\Greenaid IDE Indigo.csproj|solutionrelative:greenaid ide indigo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95226BE1-3AB0-45A2-9880-B0C5E9F50939}|Greenaid IDE Indigo\\Greenaid IDE Indigo.csproj|C:\\Users\\greens\\Documents\\GitHub\\Greenaid-IDE-Indigo\\greenaid ide indigo\\about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95226BE1-3AB0-45A2-9880-B0C5E9F50939}|Greenaid IDE Indigo\\Greenaid IDE Indigo.csproj|solutionrelative:greenaid ide indigo\\about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95226BE1-3AB0-45A2-9880-B0C5E9F50939}|Greenaid IDE Indigo\\Greenaid IDE Indigo.csproj|C:\\Users\\greens\\Documents\\GitHub\\Greenaid-IDE-Indigo\\greenaid ide indigo\\about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{95226BE1-3AB0-45A2-9880-B0C5E9F50939}|Greenaid IDE Indigo\\Greenaid IDE Indigo.csproj|solutionrelative:greenaid ide indigo\\about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95226BE1-3AB0-45A2-9880-B0C5E9F50939}|Greenaid IDE Indigo\\Greenaid IDE Indigo.csproj|C:\\Users\\greens\\Documents\\GitHub\\Greenaid-IDE-Indigo\\greenaid ide indigo\\options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -38,11 +38,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "about.cs",
               "DocumentMoniker": "C:\\Users\\greens\\Documents\\GitHub\\Greenaid-IDE-Indigo\\Greenaid IDE Indigo\\about.cs",
               "RelativeDocumentMoniker": "Greenaid IDE Indigo\\about.cs",
@@ -50,46 +50,44 @@
               "RelativeToolTip": "Greenaid IDE Indigo\\about.cs",
               "ViewState": "AgIAAAYAAAAgmpmZmZkowBAAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T15:50:07.364Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-12T15:50:07.364Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "options.cs",
               "DocumentMoniker": "C:\\Users\\greens\\Documents\\GitHub\\Greenaid-IDE-Indigo\\Greenaid IDE Indigo\\options.cs",
               "RelativeDocumentMoniker": "Greenaid IDE Indigo\\options.cs",
               "ToolTip": "C:\\Users\\greens\\Documents\\GitHub\\Greenaid-IDE-Indigo\\Greenaid IDE Indigo\\options.cs",
               "RelativeToolTip": "Greenaid IDE Indigo\\options.cs",
-              "ViewState": "AgIAAAAAAAAAmpmZmdkhwBUAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAGgAAABAmZmZmdkwwHIAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-11T19:38:08.215Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\greens\\Documents\\GitHub\\Greenaid-IDE-Indigo\\Greenaid IDE Indigo\\Program.cs",
               "RelativeDocumentMoniker": "Greenaid IDE Indigo\\Program.cs",
               "ToolTip": "C:\\Users\\greens\\Documents\\GitHub\\Greenaid-IDE-Indigo\\Greenaid IDE Indigo\\Program.cs",
               "RelativeToolTip": "Greenaid IDE Indigo\\Program.cs",
-              "ViewState": "AgIAACkAAAAAAQAAAAAqwDwAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAABAPRsAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-11T19:30:37.056Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "about.cs [Design]",
               "DocumentMoniker": "C:\\Users\\greens\\Documents\\GitHub\\Greenaid-IDE-Indigo\\Greenaid IDE Indigo\\about.cs",
               "RelativeDocumentMoniker": "Greenaid IDE Indigo\\about.cs",
               "ToolTip": "C:\\Users\\greens\\Documents\\GitHub\\Greenaid-IDE-Indigo\\Greenaid IDE Indigo\\about.cs [Design]",
               "RelativeToolTip": "Greenaid IDE Indigo\\about.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T19:27:42.498Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-01-11T19:27:42.498Z"
             },
             {
               "$type": "Document",
@@ -100,17 +98,18 @@
               "ToolTip": "C:\\Users\\greens\\Documents\\GitHub\\Greenaid-IDE-Indigo\\Greenaid IDE Indigo\\options.cs [Design]",
               "RelativeToolTip": "Greenaid IDE Indigo\\options.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T19:27:40.564Z"
+              "WhenOpened": "2025-01-11T19:27:40.564Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\greens\\Documents\\GitHub\\Greenaid-IDE-Indigo\\Greenaid IDE Indigo\\Form1.cs",
               "RelativeDocumentMoniker": "Greenaid IDE Indigo\\Form1.cs",
               "ToolTip": "C:\\Users\\greens\\Documents\\GitHub\\Greenaid-IDE-Indigo\\Greenaid IDE Indigo\\Form1.cs",
               "RelativeToolTip": "Greenaid IDE Indigo\\Form1.cs",
-              "ViewState": "AgIAAE4AAACANDMzM7MhwGAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAANcBAAAAAAAAAAAuwOUBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-11T19:24:25.711Z",
               "EditorCaption": ""
@@ -124,8 +123,7 @@
               "ToolTip": "C:\\Users\\greens\\Documents\\GitHub\\Greenaid-IDE-Indigo\\Greenaid IDE Indigo\\Form1.cs [Design]",
               "RelativeToolTip": "Greenaid IDE Indigo\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T19:18:58.066Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-01-11T19:18:58.066Z"
             }
           ]
         }
