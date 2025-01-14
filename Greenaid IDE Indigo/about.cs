@@ -29,7 +29,7 @@ namespace Greenaid_IDE_Indigo
             }
             if (Form1.indigoSettings[3] == "lang=es")
             {
-                label2.Text = "Por: GreenSoupDeveloper";
+                label2.Text = "Hecho por: GreenSoupDev";
 
 
             }
@@ -39,6 +39,21 @@ namespace Greenaid_IDE_Indigo
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/GreenSoupDeveloper/Greenaid-IDE-Indigo");
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/GreenSoupDeveloper/Greenaid-IDE-Indigo");
         }
     }
 }

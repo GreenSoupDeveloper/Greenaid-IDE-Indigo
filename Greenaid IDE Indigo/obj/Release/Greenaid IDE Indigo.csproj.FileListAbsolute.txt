@@ -10,3 +10,21 @@ C:\Users\greens\Documents\GitHub\Greenaid-IDE-Indigo\Greenaid IDE Indigo\obj\Rel
 C:\Users\greens\Documents\GitHub\Greenaid-IDE-Indigo\Greenaid IDE Indigo\obj\Release\Greenaid IDE Indigo.csproj.CoreCompileInputs.cache
 C:\Users\greens\Documents\GitHub\Greenaid-IDE-Indigo\Greenaid IDE Indigo\obj\Release\Greenaid IDE Indigo.exe
 C:\Users\greens\Documents\GitHub\Greenaid-IDE-Indigo\Greenaid IDE Indigo\obj\Release\Greenaid IDE Indigo.pdb
+C:\Users\greens\Downloads\Greenaid-IDE-Indigo-main\Greenaid IDE Indigo\bin\Release\Greenaid IDE Indigo.exe.config
+C:\Users\greens\Downloads\Greenaid-IDE-Indigo-main\Greenaid IDE Indigo\bin\Release\Greenaid IDE Indigo.exe
+C:\Users\greens\Downloads\Greenaid-IDE-Indigo-main\Greenaid IDE Indigo\bin\Release\Greenaid IDE Indigo.pdb
+C:\Users\greens\Downloads\Greenaid-IDE-Indigo-main\Greenaid IDE Indigo\bin\Release\FastColoredTextBox.dll
+C:\Users\greens\Downloads\Greenaid-IDE-Indigo-main\Greenaid IDE Indigo\bin\Release\FastColoredTextBox.xml
+C:\Users\greens\Downloads\Greenaid-IDE-Indigo-main\Greenaid IDE Indigo\obj\Release\Greenaid IDE Indigo.csproj.AssemblyReference.cache
+C:\Users\greens\Downloads\Greenaid-IDE-Indigo-main\Greenaid IDE Indigo\obj\Release\Greenaid_IDE_Indigo.about.resources
+C:\Users\greens\Downloads\Greenaid-IDE-Indigo-main\Greenaid IDE Indigo\obj\Release\Greenaid_IDE_Indigo.Form1.resources
+C:\Users\greens\Downloads\Greenaid-IDE-Indigo-main\Greenaid IDE Indigo\obj\Release\Greenaid_IDE_Indigo.options.resources
+C:\Users\greens\Downloads\Greenaid-IDE-Indigo-main\Greenaid IDE Indigo\obj\Release\Greenaid_IDE_Indigo.Properties.Resources.resources
+C:\Users\greens\Downloads\Greenaid-IDE-Indigo-main\Greenaid IDE Indigo\obj\Release\Greenaid IDE Indigo.csproj.GenerateResource.cache
+C:\Users\greens\Downloads\Greenaid-IDE-Indigo-main\Greenaid IDE Indigo\obj\Release\Greenaid IDE Indigo.csproj.CoreCompileInputs.cache
+C:\Users\greens\Downloads\Greenaid-IDE-Indigo-main\Greenaid IDE Indigo\obj\Release\Greenaid.A7E63EA9.Up2Date
+C:\Users\greens\Downloads\Greenaid-IDE-Indigo-main\Greenaid IDE Indigo\obj\Release\Greenaid IDE Indigo.exe
+C:\Users\greens\Downloads\Greenaid-IDE-Indigo-main\Greenaid IDE Indigo\obj\Release\Greenaid IDE Indigo.pdb
+C:\Users\greens\Documents\GitHub\Greenaid-IDE-Indigo\Greenaid IDE Indigo\bin\Release\FastColoredTextBox.dll
+C:\Users\greens\Documents\GitHub\Greenaid-IDE-Indigo\Greenaid IDE Indigo\bin\Release\FastColoredTextBox.xml
+C:\Users\greens\Documents\GitHub\Greenaid-IDE-Indigo\Greenaid IDE Indigo\obj\Release\Greenaid.A7E63EA9.Up2Date

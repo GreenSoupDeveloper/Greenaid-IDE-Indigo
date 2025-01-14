@@ -19,26 +19,26 @@ namespace Greenaid_IDE_Indigo
 {
     static class Program
     {
-      
+
         public static void CreateFiles()
         {
             try
             {
 
-                StreamWriter sw = new StreamWriter("indigoSettings.cfg");
+                StreamWriter sw = new StreamWriter(AppDomain.CurrentDomain.BaseDirectory + "\\indigoSettings.cfg");
                 sw.WriteLine("[INDIGO_SETTINGS]");
                 sw.WriteLine("theme=light");
                 sw.WriteLine("textSize=10");
                 sw.WriteLine("lang=en");
                 sw.WriteLine("[OTHER]");
                 sw.WriteLine("csharpDirMode=0");
-                sw.WriteLine("csharpCustomDir=none");
+                sw.WriteLine("csharpCustomDir=");
                 sw.WriteLine("csharpCompiledName=program");
-                sw.WriteLine("htmlBrowserDir=none");
-                sw.WriteLine("lastFileOpened=none");
+                sw.WriteLine("htmlBrowserDir=");
+                sw.WriteLine("lastFileOpened=");
                 sw.Close();
-             
-             
+
+
 
 
 
@@ -59,7 +59,7 @@ namespace Greenaid_IDE_Indigo
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
 
 
@@ -67,30 +67,27 @@ namespace Greenaid_IDE_Indigo
             Application.SetCompatibleTextRenderingDefault(false);
             try
             {
-                if (!File.Exists("indigoSettings.cfg"))
+                if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + "\\indigoSettings.cfg"))
                 {
                     CreateFiles();
                 }
                 try
                 {
-                    Form1.indigoSettings = File.ReadAllLines("indigoSettings.cfg");
-                    Application.Run(new Form1());
+                    string arg = "";
+                    if (args.Length > 0)
+                        arg = args[0];
+                    Form1.indigoSettings = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + "\\indigoSettings.cfg");
+                    Application.Run(new Form1(arg));
                 }
                 catch (Exception ex)
                 {
-                    if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "es")
-                    {
-                        MessageBox.Show("Sucedio un error mientras estabas usando Greenaid IDE Indigo.\n\nError: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    if (File.ReadAllText(@"greenaideindigo\languaje.dll") == "en")
-                    {
-                        MessageBox.Show("Something wrong happened when using Greenaid IDE Indigo.\n\nError: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    MessageBox.Show("Sucedio un error mientras estabas usando Greenaid IDE Indigo.\n\nSomething wrong happened when using Greenaid IDE Indigo.\n\nError: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
 
 
 
                 }
-               
+
             }
             catch (Exception ex)
             {

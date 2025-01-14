@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Greenaid_IDE_Indigo
 {
@@ -44,9 +45,10 @@ namespace Greenaid_IDE_Indigo
                 this.tabPage3.ForeColor = System.Drawing.Color.FromArgb(25, 25, 25);
                 this.tabPage3.BackColor = System.Drawing.Color.FromArgb(25, 25, 25);
             }
-
+            comboBox1.SelectedIndex = 0;
             if (Form1.indigoSettings[3] == "lang=es")
             {
+                comboBox1.SelectedIndex = 2;
                 label1.Text = "Opciones de Greenaid IDE Indigo";
                 label2.Text = "Temas:";
                 label3.Text = "Idiomas:";
@@ -55,9 +57,26 @@ namespace Greenaid_IDE_Indigo
                 button1.Text = "Aceptar";
                 label4.Text = "Como elegir el directorio para la aplicacion compilada:";
                 label5.Text = "Nombre de aplicacion:";
-                checkBox1.Text = "Elegir al clickear el boton de 'Compilar codigo de C#'";
+                checkBox1.Text = "Elegir al clickear el boton 'Compilar Codigo'";
                 checkBox2.Text = "Elegir un directorio predefinido custom";
                 label7.Text = "Directorio del Navegador Web";
+
+            }
+            if (Form1.indigoSettings[3] == "lang=fr")
+            {
+                comboBox1.SelectedIndex = 1;
+                label1.Text = "Options de Greenaid IDE Indigo";
+                label2.Text = "Thèmes :";
+                label3.Text = "Langues :";
+                button2.Text = "Sombre";
+                button3.Text = "Clair";
+                button1.Text = "Accepter";
+                label4.Text = "Comment choisir le répertoire pour l'application compilée :";
+                label5.Text = "Nom de l'application :";
+                checkBox1.Text = "Choisir en cliquant sur le bouton 'Compiler le vofr'";
+                checkBox2.Text = "Choisir un répertoire prédéfini personnalisé";
+                label7.Text = "Répertoire du navigateur Web";
+
 
             }
 
@@ -74,10 +93,11 @@ namespace Greenaid_IDE_Indigo
                 checkBox2.Checked = true;
                 textBox1.Enabled = true;
             }
+            
 
             textBox1.Text = Form1.indigoSettings[6].Split(new[] { "=" }, StringSplitOptions.None)[1];
 
-          
+
             textBox2.Text = Form1.indigoSettings[7].Split(new[] { "=" }, StringSplitOptions.None)[1];
             textBox3.Text = Form1.indigoSettings[8].Split(new[] { "=" }, StringSplitOptions.None)[1];
 
@@ -114,6 +134,10 @@ namespace Greenaid_IDE_Indigo
             {
                 Form1.indigoSettings[3] = "lang=en";
             }
+            if (comboBox1.SelectedIndex == 1)
+            {
+                Form1.indigoSettings[3] = "lang=fr";
+            }
             if (Form1.indigoSettings[3] == "lang=es")
             {
                 MessageBox.Show("Para aplicar los cambios, debes reiniciar el programa", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -126,13 +150,19 @@ namespace Greenaid_IDE_Indigo
                 this.Close();
 
             }
+            else if (Form1.indigoSettings[3] == "lang=fr")
+            {
+                MessageBox.Show("Pour appliquer les modifications, vous devez redémarrer le programme.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+
+            }
             else
             {
                 MessageBox.Show("To apply the changes, you need to restart the program.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
 
             }
-            File.WriteAllLines("indigoSettings.cfg", Form1.indigoSettings);
+            File.WriteAllLines(AppDomain.CurrentDomain.BaseDirectory + "\\indigoSettings.cfg", Form1.indigoSettings);
 
 
         }

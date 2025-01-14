@@ -170,7 +170,7 @@ namespace Greenaid_IDE_Indigo
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(689, 306);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "C# Settings";
+            this.tabPage2.Text = "Build Settings";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // textBox2
@@ -233,9 +233,9 @@ namespace Greenaid_IDE_Indigo
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(9, 32);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(324, 17);
+            this.checkBox1.Size = new System.Drawing.Size(307, 17);
             this.checkBox1.TabIndex = 15;
-            this.checkBox1.Text = "Select the directory when clicking the \'Compile C# code\' button";
+            this.checkBox1.Text = "Select the directory when clicking the \'Compile code\' button";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
             // 
@@ -254,7 +254,7 @@ namespace Greenaid_IDE_Indigo
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(145, 7);
+            this.textBox3.Location = new System.Drawing.Point(282, 8);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(368, 20);
             this.textBox3.TabIndex = 27;
@@ -262,7 +262,7 @@ namespace Greenaid_IDE_Indigo
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(519, 6);
+            this.button5.Location = new System.Drawing.Point(656, 7);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(27, 23);
             this.button5.TabIndex = 25;
